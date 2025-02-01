@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="primaryColor">#6200EE</color>
+    <color name="primaryVariantColor">#3700B3</color>
+    <color name="onPrimaryColor">#FFFFFF</color>
+    <color name="gray">#808080</color>
+    <color name="background_color">#FFFFFF</color> <!-- לבן -->
+    <color name="day_background">#F9F9F9</color> <!-- אפור בהיר מאוד -->
+    <color name="selected_day">#FFCC00</color> <!-- צבע מודגש ליום נבחר -->
+    <color name="day_text">#000000</color> <!-- טקסט שחור -->
+
+
+</resources>

@@ -1,0 +1,30 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_guest_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guest Email"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_attending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmed" />
+
+    <Button
+        android:id="@+id/btn_not_attending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Declined"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

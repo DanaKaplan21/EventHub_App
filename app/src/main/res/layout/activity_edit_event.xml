@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.EditEventActivity">
+
+    <!-- Title Input -->
+    <EditText
+        android:id="@+id/et_event_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Event Title"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Description Input -->
+    <EditText
+        android:id="@+id/et_event_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Event Description"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/et_event_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Date Input -->
+    <EditText
+        android:id="@+id/et_event_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter date (DD-MM-YYYY HH:MM)"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/et_event_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Location Input -->
+    <EditText
+        android:id="@+id/et_event_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Event Location"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/et_event_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Invite Email Input -->
+    <EditText
+        android:id="@+id/et_invite_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Add Invitee Email"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/et_event_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Add Invitee Button -->
+    <Button
+        android:id="@+id/btn_add_invitee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Invitee"
+        app:layout_constraintTop_toBottomOf="@id/et_invite_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Invitees List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inviteeRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_invitee"
+        app:layout_constraintBottom_toTopOf="@id/btn_save_event"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        tools:listitem="@layout/item_invitee" />
+
+    <!-- Save Event Button -->
+    <Button
+        android:id="@+id/btn_save_event"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save Event"
+        app:layout_constraintTop_toBottomOf="@id/inviteeRecyclerView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

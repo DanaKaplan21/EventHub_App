@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EventHub</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="nav_events">Events</string>
+    <string name="nav_guests">Guests</string>
+    <string name="event_title_hint">Enter event title</string>
+    <string name="event_description_hint">Enter event description</string>
+    <string name="event_date_hint">Enter event date</string>
+    <string name="event_location_hint">Enter event location</string>
+    <string name="save_event_button">Save Event</string>
+    <string name="next_month">Next Month</string>
+    <string name="prev_month">Previous Month</string>
+
+
+</resources>
