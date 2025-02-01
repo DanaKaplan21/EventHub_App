@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,6 +33,13 @@ public class InviteeAdapter extends RecyclerView.Adapter<InviteeAdapter.InviteeV
         Guest guest = invitees.get(position);
         holder.tvEmail.setText(guest.getEmail());
         holder.tvStatus.setText(guest.getStatus());
+
+        holder.itemView.setOnLongClickListener(v -> {
+            invitees.remove(position); // הסרת המוזמן מהרשימה
+            notifyItemRemoved(position); // עדכון ה-RecyclerView
+            Toast.makeText(v.getContext(), "Guest removed", Toast.LENGTH_SHORT).show();
+            return true;
+        });
     }
 
     @Override

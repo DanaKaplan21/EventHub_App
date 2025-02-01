@@ -53,7 +53,7 @@ public class EditEventActivity extends AppCompatActivity {
         btnAddInvitee.setOnClickListener(v -> {
             String email = etInviteEmail.getText().toString().trim();
             if (!email.isEmpty()) {
-                invitees.add(new Guest(email, "Pending"));
+                invitees.add(new Guest(email, "Invited"));
                 inviteeAdapter.notifyDataSetChanged();
                 etInviteEmail.setText("");
             } else {

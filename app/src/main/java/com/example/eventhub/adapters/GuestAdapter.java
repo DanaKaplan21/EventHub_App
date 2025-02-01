@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.eventhub.R;
@@ -36,11 +37,20 @@ public class GuestAdapter extends RecyclerView.Adapter<GuestAdapter.GuestViewHol
         holder.tvEmail.setText(guest.getEmail());
         holder.tvStatus.setText(guest.getStatus());
 
+        // אירוע לחיצה קצרה לעדכון סטטוס המוזמן
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), GuestStatusUpdateActivity.class);
             intent.putExtra("guest_email", guest.getEmail());
             intent.putExtra("event_id", eventId);
             ((Activity) v.getContext()).startActivityForResult(intent, REQUEST_CODE_UPDATE_STATUS);
+        });
+
+        // אירוע לחיצה ארוכה למחיקת מוזמן מהרשימה
+        holder.itemView.setOnLongClickListener(v -> {
+            guestList.remove(position);
+            notifyItemRemoved(position);
+            Toast.makeText(v.getContext(), "Guest removed", Toast.LENGTH_SHORT).show();
+            return true;
         });
     }
 

@@ -60,7 +60,7 @@ public interface ApiService {
     Call<List<Guest>> getGuestsByEvent(@Path("event_Id") String eventId);
 
     // הוספת מוזמן חדש
-    @POST("/api/guests")
+    @POST("/api/guests/{event_Id}")
     Call<Void> addGuest(@Body Guest guest);
 
     // עדכון סטטוס מוזמן (אישור הגעה או ביטול)
