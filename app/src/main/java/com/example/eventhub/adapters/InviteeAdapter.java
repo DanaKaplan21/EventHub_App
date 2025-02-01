@@ -35,8 +35,8 @@ public class InviteeAdapter extends RecyclerView.Adapter<InviteeAdapter.InviteeV
         holder.tvStatus.setText(guest.getStatus());
 
         holder.itemView.setOnLongClickListener(v -> {
-            invitees.remove(position); // הסרת המוזמן מהרשימה
-            notifyItemRemoved(position); // עדכון ה-RecyclerView
+            invitees.remove(position);
+            notifyItemRemoved(position);
             Toast.makeText(v.getContext(), "Guest removed", Toast.LENGTH_SHORT).show();
             return true;
         });

@@ -31,7 +31,7 @@ import retrofit2.Response;
 public class EventListFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private Button addEventButton; // כפתור יצירת האירוע החדש
+    private Button addEventButton;
 
     @Nullable
     @Override
@@ -41,9 +41,8 @@ public class EventListFragment extends Fragment {
         recyclerView = view.findViewById(R.id.eventsRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        addEventButton = view.findViewById(R.id.addEventButton); // איתחול הכפתור
+        addEventButton = view.findViewById(R.id.addEventButton);
         addEventButton.setOnClickListener(v -> {
-            // מעבר ל-EditEventActivity
             Intent intent = new Intent(getContext(), EditEventActivity.class);
             startActivity(intent);
         });

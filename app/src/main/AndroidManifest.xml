@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EventHub">
 
-        <!-- מסך רישום כמסך ראשי -->
         <activity
             android:name=".ui.activities.RegistrationActivity"
             android:exported="true">
@@ -24,7 +23,6 @@
             </intent-filter>
         </activity>
 
-        <!-- מסך הבית -->
         <activity android:name=".ui.activities.MainActivity" />
         <activity android:name=".ui.activities.EditEventActivity" />
         <activity android:name=".ui.activities.GuestStatusUpdateActivity" />

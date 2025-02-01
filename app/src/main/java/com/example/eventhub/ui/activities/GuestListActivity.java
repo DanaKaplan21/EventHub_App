@@ -71,7 +71,7 @@ public class GuestListActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE_UPDATE_STATUS && resultCode == RESULT_OK) {
-            fetchGuestList(); // רענון הנתונים לאחר עדכון סטטוס
+            fetchGuestList();
         }
     }
 }

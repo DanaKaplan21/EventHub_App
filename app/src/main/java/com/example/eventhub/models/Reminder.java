@@ -3,16 +3,14 @@ package com.example.eventhub.models;
 import java.util.Date;
 
 public class Reminder {
-    private String id; // מזהה התזכורת
-    private String eventId; // מזהה האירוע הקשור לתזכורת
-    private String recipientEmail; // כתובת האימייל של המקבל
-    private Date sentAt; // מתי נשלחה התזכורת
+    private String id;
+    private String eventId;
+    private String recipientEmail;
+    private Date sentAt;
 
-    // בנאי ריק (נדרש לספריות כמו Retrofit או Firebase)
     public Reminder() {
     }
 
-    // בנאי מלא
     public Reminder(String id, String eventId, String recipientEmail, Date sentAt) {
         this.id = id;
         this.eventId = eventId;
@@ -53,7 +51,7 @@ public class Reminder {
         this.sentAt = sentAt;
     }
 
-    // פונקציה להדפסת האובייקט
+
     @Override
     public String toString() {
         return "Reminder{" +

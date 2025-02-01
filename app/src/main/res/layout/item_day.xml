@@ -5,7 +5,6 @@
     android:layout_height="50dp"
     android:background="@drawable/item_background">
 
-    <!-- טקסט שמציג את היום -->
     <TextView
         android:id="@+id/dayTextView"
         android:layout_width="wrap_content"
@@ -15,7 +14,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- אייקון האירוע -->
     <ImageView
         android:id="@+id/eventIcon"
         android:layout_width="24dp"

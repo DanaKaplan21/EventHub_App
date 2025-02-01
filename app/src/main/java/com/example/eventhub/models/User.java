@@ -1,17 +1,15 @@
 package com.example.eventhub.models;
 
 public class User {
-    private String id; // מזהה ייחודי
+    private String id;
     private String name;
     private String email;
-    private String role; // תפקיד (לדוגמה: "מארגן", "משתמש רגיל")
+    private String role;
     private String password;
 
-    // בנאי ריק (נדרש על ידי ספריות כמו Retrofit/Firebase)
     public User() {
     }
 
-    // בנאי מלא
     public User(String id, String name, String email, String role, String password) {
         this.id = id;
         this.name = name;
@@ -61,7 +59,6 @@ public class User {
         this.password = password;
     }
 
-    // פונקציה להדפסת המידע של המשתמש
     @Override
     public String toString() {
         return "User{" +

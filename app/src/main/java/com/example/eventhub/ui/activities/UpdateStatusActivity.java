@@ -32,7 +32,6 @@ public class UpdateStatusActivity extends AppCompatActivity {
         rgStatus = findViewById(R.id.rg_status);
         btnSubmitStatus = findViewById(R.id.btn_submit_status);
 
-        // קבלת הנתונים מה-Intent
         String guestEmail = getIntent().getStringExtra("guest_email");
         String eventId = getIntent().getStringExtra("event_id");
 

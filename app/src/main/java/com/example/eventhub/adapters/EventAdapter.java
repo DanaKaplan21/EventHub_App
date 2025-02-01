@@ -21,10 +21,10 @@ import java.util.List;
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
 
     private final List<Event> eventList;
-    private final Context context; // הוספת context
+    private final Context context;
 
     public EventAdapter(Context context, List<Event> eventList) {
-        this.context = context; // אתחול context
+        this.context = context;
         this.eventList = eventList;
     }
 
@@ -39,13 +39,11 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
     public void onBindViewHolder(@NonNull EventViewHolder holder, int position) {
         Event event = eventList.get(position);
 
-        // הצגת פרטי האירוע בשורה
         holder.eventTitle.setText(event.getTitle());
         holder.eventDate.setText(event.getDate());
         holder.eventDescription.setText(event.getDescription());
         holder.eventLocation.setText(event.getLocation());
 
-        // לחיצה על האירוע לפתיחת מסך המוזמנים
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), GuestListActivity.class);
             intent.putExtra("event_id", event.getId()); // וודא ש-getId() מחזיר ערך תקין

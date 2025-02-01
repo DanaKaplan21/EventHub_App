@@ -37,7 +37,6 @@ public class GuestAdapter extends RecyclerView.Adapter<GuestAdapter.GuestViewHol
         holder.tvEmail.setText(guest.getEmail());
         holder.tvStatus.setText(guest.getStatus());
 
-        // אירוע לחיצה קצרה לעדכון סטטוס המוזמן
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), GuestStatusUpdateActivity.class);
             intent.putExtra("guest_email", guest.getEmail());
@@ -45,7 +44,6 @@ public class GuestAdapter extends RecyclerView.Adapter<GuestAdapter.GuestViewHol
             ((Activity) v.getContext()).startActivityForResult(intent, REQUEST_CODE_UPDATE_STATUS);
         });
 
-        // אירוע לחיצה ארוכה למחיקת מוזמן מהרשימה
         holder.itemView.setOnLongClickListener(v -> {
             guestList.remove(position);
             notifyItemRemoved(position);

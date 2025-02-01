@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.EventListFragment">
 
-    <!-- כפתור להוספת אירוע -->
     <Button
         android:id="@+id/addEventButton"
         android:layout_width="wrap_content"
@@ -20,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- רשימת האירועים -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/eventsRecyclerView"
         android:layout_width="0dp"

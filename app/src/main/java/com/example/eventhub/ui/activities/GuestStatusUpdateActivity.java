@@ -26,16 +26,14 @@ public class GuestStatusUpdateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_guest_status_update);
 
         tvGuestEmail = findViewById(R.id.tv_guest_email);
-        btnConfirmed = findViewById(R.id.btn_attending); // שם הכפתור צריך להתאים ל-XML
+        btnConfirmed = findViewById(R.id.btn_attending);
         btnDeclined = findViewById(R.id.btn_not_attending);
 
-        // קבלת הנתונים מה-Intent
         guestEmail = getIntent().getStringExtra("guest_email");
         eventId = getIntent().getStringExtra("event_id");
 
         tvGuestEmail.setText(guestEmail);
 
-        // עדכון לחיצות הכפתורים עם הסטטוסים החדשים
         btnConfirmed.setOnClickListener(v -> updateGuestStatus("Confirmed"));
         btnDeclined.setOnClickListener(v -> updateGuestStatus("Declined"));
     }

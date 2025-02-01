@@ -21,8 +21,8 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        etName = findViewById(R.id.et_name); // שדה לשם
-        etEmail = findViewById(R.id.et_email); // שדה לאימייל
+        etName = findViewById(R.id.et_name);
+        etEmail = findViewById(R.id.et_email);
         btnRegister = findViewById(R.id.btn_register);
 
         btnRegister.setOnClickListener(v -> {
@@ -41,8 +41,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private void saveUserToPreferences(String name, String email) {
         SharedPreferences sharedPreferences = getSharedPreferences("EventHubPrefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("user_name", name); // שמירת שם המשתמש
-        editor.putString("user_email", email); // שמירת אימייל המשתמש
+        editor.putString("user_name", name);
+        editor.putString("user_email", email);
         editor.apply();
     }
 

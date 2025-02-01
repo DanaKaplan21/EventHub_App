@@ -46,7 +46,6 @@ public class EventDetailsActivity extends AppCompatActivity {
         }
 
         btnEditEvent.setOnClickListener(v -> {
-            // כאן ניתן להוסיף מעבר למסך עריכת אירוע
         });
     }
 
@@ -82,7 +81,7 @@ public class EventDetailsActivity extends AppCompatActivity {
             public void onResponse(Call<List<Guest>> call, Response<List<Guest>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<Guest> guests = response.body();
-                    GuestAdapter adapter = new GuestAdapter(guests, eventId); // כאן מתוקן
+                    GuestAdapter adapter = new GuestAdapter(guests, eventId);
                     rvGuests.setLayoutManager(new LinearLayoutManager(EventDetailsActivity.this));
                     rvGuests.setAdapter(adapter);
                 } else {

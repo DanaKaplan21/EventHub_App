@@ -43,7 +43,7 @@ public class CalendarFragment extends Fragment {
 
         monthYearTextView = view.findViewById(R.id.monthYearTextView);
         recyclerView = view.findViewById(R.id.calendarRecyclerView);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 7)); // 7 ימים בשבוע
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 7));
 
         calendar = Calendar.getInstance();
 
